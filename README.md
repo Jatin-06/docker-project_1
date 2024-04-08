@@ -26,11 +26,5 @@ docker cp colors.js 9008825ac8f3:/usr/share/nginx/html <br>
 docker cp index.html 9008825ac8f3:/usr/share/nginx/html <br> 
 Open browser hit ip:portnumber <br> 
 
-Now we will Deploy app by Creating Dockerfile <br>
-FROM ubuntu  <br>
-RUN apt update && apt install nginx -y <br>
-COPY . /var/www/html  <br>
-CMD nginx -g 'daemon off;'    //this command will stop daemon so that it wont run in background. We want nginx to run in foreground <br>
 
-docker build . -t swizzy      //this command will make image
 
