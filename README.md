@@ -1,4 +1,5 @@
 # docker-project_1
+below is manual step, after that we will see making Dockerfile and expose container to outside world, steps are below manual!!
 
 HISTORY <br>
 docker pull nginx:stable-alpine3.17-slim <br>
@@ -24,3 +25,11 @@ docker cp colors.css 9008825ac8f3:/usr/share/nginx/html <br>
 docker cp colors.js 9008825ac8f3:/usr/share/nginx/html <br> 
 docker cp index.html 9008825ac8f3:/usr/share/nginx/html <br> 
 Open browser hit ip:portnumber <br> 
+
+
+<br>Now we will Deploy app by Creating Dockerfile
+FROM ubuntu
+RUN apt update && apt install nginx -y
+COPY . /var/www/html
+CMD nginx -g 'daemon off;'       //this command will stop daemon so that it wont run in background. <br/>
+
