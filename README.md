@@ -1,8 +1,8 @@
 # docker-project_1
 
-HISTORY
-docker pull nginx:stable-alpine3.17-slim
-docker run -d -p 8080:80 nginx:stable-alpine3.17-slim
+HISTORY <br>
+docker pull nginx:stable-alpine3.17-slim <br>
+docker run -d -p 8080:80 nginx:stable-alpine3.17-slim <br>
 docker --help
 docker exec --help
 docker ps
